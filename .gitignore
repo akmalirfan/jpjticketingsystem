@@ -1,1 +1,6 @@
 jpjticketingsystem.ldb
+/jpjticketingsystem/build
+/jpjticketingsystem/dist
+/jpjticketingsystem/nbproject/private
+
+*.class
