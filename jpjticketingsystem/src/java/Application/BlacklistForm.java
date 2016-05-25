@@ -1,8 +1,8 @@
 package Application;
 
+import Business.User;
+//import Middleware.mainDB;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,19 +33,7 @@ public class BlacklistForm extends HttpServlet {
 	}
 
         @Override
-        protected void doPost(HttpServletRequest request,
-                HttpServletResponse response) throws ServletException, IOException {
-            String icno = request.getParameter("icno");
-            RequestDispatcher rd = null;
-
-            //if return success
-            try (PrintWriter out = response.getWriter()) {
-                if (icno.equals("991122061234")) {
-                    out.println("You are blacklisted");
-                } else {
-                    out.println("No record");
-                }
-            }
-            rd.forward(request, response);
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            User[] users = mainDB.getBlacklistedUsers(response);
         }
 }

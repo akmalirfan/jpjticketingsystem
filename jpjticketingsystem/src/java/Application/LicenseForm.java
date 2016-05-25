@@ -41,5 +41,8 @@ public class LicenseForm {
 	public void showForm(){
 
 	}
-
+        
+        public void cubaan() {
+            System.out.println("licenseform");
+        }
 }

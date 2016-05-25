@@ -12,14 +12,21 @@ public class User {
 	private String IC;
 	private License license;
 	private String name;
-	private Ticket[] ticket;
-	private Vehicle[] vehicle;
-	public Vehicle m_Vehicle;
-	public Ticket m_Ticket;
+	//private Ticket[] ticket;
+	//private Vehicle[] vehicle;
+	//public Vehicle m_Vehicle;
+	//public Ticket m_Ticket;
 	public License m_License;
 
 	public User(){
-
+            
+	}
+        
+        public User(String ic, String n, License l, String bl){
+            IC = ic;
+            name = n;
+            license = l;
+            blackliststatus = bl;
 	}
 
 	public void finalize() throws Throwable {
